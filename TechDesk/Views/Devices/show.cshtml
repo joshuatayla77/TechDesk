@@ -1,0 +1,13 @@
+﻿<h2>All Available Devices</h2>
+
+<p>There is a total of @ViewBag.DeviceCount devices</p>
+
+@model List<Device>
+...
+@foreach (Device each_device in Model)
+
+{
+    <partial name="_DeviceRow"
+             model="each_device" />
+}
+

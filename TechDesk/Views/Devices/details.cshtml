@@ -1,0 +1,11 @@
+﻿@model TechDesk.Models.Device
+
+@{
+    ViewData["Title"] = "Device Details";
+    <h4>Chosen Device is : @Model.Name</h4>
+    <p>Device ID: @Model.Id</p>
+    <p>Device's Asset Tag is : @Model.AssetTag</p>
+	<p>Device's Category : @Model.Category</p>
+    <p>Purchase Year of the device is : @Model.PurchaseYear</p>
+    <p>Is the device is on loan : @Model.IsOnLoan</p>
+}
