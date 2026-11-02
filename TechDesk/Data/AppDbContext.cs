@@ -26,7 +26,7 @@ namespace TechDesk.Data
              new Device { Id = 5, AssetTag = "ECC-0023",Name = "Lenovo ThinkPad E14", Category = "Laptop", PurchaseYear = 2017, IsOnLoan = "no" });
 
 
-           
+            
         }
     }
 }

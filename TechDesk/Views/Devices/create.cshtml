@@ -1,0 +1,38 @@
+﻿@model TechDesk.Models.Device
+
+<h4>ADD A NEW DEVICE</h4>
+<form method="post">
+
+    <label> The AssetTag</label>
+    <input asp-for="AssetTag" class="form-control" />
+    <span asp-validation-for="AssetTag" class="text-danger"></span>
+
+    <br />
+
+    <label>Device'sName</label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+
+    <br />
+
+    <label>Device's Category</label>
+    <input asp-for="Category" class="form-control" />
+
+    <br />
+
+    <label>Device's Purchase Year</label>
+    <input asp-for="PurchaseYear" class="form-control" />
+
+    <br />
+
+    <label>
+        <input type="checkbox" name="onLoan" value="true" />
+        On loan?
+    </label>
+
+    <br /><br />
+
+    <button type="submit" class="btn btn-primary">
+        Add Device
+    </button>
+</form>

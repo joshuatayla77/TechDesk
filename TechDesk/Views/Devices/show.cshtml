@@ -1,4 +1,33 @@
-﻿<h2>All Available Devices</h2>
+﻿
+<form>
+<input type="text"
+           name="name"
+           value="@ViewBag.Name"
+           placeholder="Search device name" />
+
+    <label>
+        <input type="checkbox"
+               name="availableOnly"
+               value="true"
+               checked="@ViewBag.AvailableOnly" />
+
+        Available only
+    </label>
+
+    <button type="submit">Search</button>
+
+
+</form>
+
+
+<h2>All Available Devices</h2>
+
+@if (TempData["Message"] != null)
+{
+    <p class="alert alert-success">
+        @TempData["Message"]
+    </p>
+}
 
 <p>There is a total of @ViewBag.DeviceCount devices</p>
 
@@ -10,4 +39,9 @@
     <partial name="_DeviceRow"
              model="each_device" />
 }
+<br />
+<a href="/devices/create" class="btn btn-success">
+    Add New Device
+</a>
+
 

@@ -24,7 +24,8 @@ namespace TechDesk.Models
 
         [Range(2015, 2026, ErrorMessage = "Purchase year must be between 2015 and 2026")]
         public int PurchaseYear { get; set; }
-        public string IsOnLoan { get; set; }
-  
+        public string IsOnLoan { get; set; } = "no";
+
+
     }
 }

@@ -1,0 +1,50 @@
+﻿@model TechDesk.Models.Device
+
+<h4>Edit a Device</h4>
+<form asp-action="Edit" asp-route-id="@Model.Id" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <label> Device's Asset Tag</label>
+    <input asp-for="AssetTag" class="form-control" />
+    <span asp-validation-for="AssetTag" class="text-danger"></span>
+
+    <br />
+
+    <label>Device's Name</label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+
+    <br />
+
+    <label>Device's Category</label>
+    <input asp-for="Category" class="form-control" />
+    <span asp-validation-for="Category" class="text-danger"></span>
+
+    <br />
+
+    <label> Device's Purchase Year</label>
+    <input asp-for="PurchaseYear" class="form-control" />
+    <span asp-validation-for="PurchaseYear" class="text-danger"></span>
+
+    <br />
+
+    <label>
+        <input type="checkbox" name="onLoan"
+        value="true"
+        checked="@(Model.IsOnLoan == "yes")" />
+        On loan?
+    </label>
+
+    <br /><br />
+
+    <button type="submit" class="btn btn-primary">
+        Save Changes
+    </button>
+
+    <a asp-controller="Devices" asp-action="Show"
+       class="btn btn-secondary">
+        Cancel
+    </a>
+
+</form>
